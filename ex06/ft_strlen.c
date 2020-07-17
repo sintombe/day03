@@ -1,16 +1,26 @@
+ /* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sintombe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/17 08:30:14 by sintombe          #+#    #+#             */
+/*   Updated: 2020/07/17 08:37:14 by sintombe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <unistd.h>
 
-void ft_putchar(char c) { write(STDOUT_FILENO, &c, 1); }
-int        ft_strlen(char *str)
+void ft_putchar(char c) { write(1, &c, 1); }
+
+int  ft_strlen(char *str)
 {
     int    i;
  
     i = 0;
-    while (str[i])
+    while (str[i]!='0')
+    
         i++;
-    return (i);
-}
-int main() {
-   
-    return 0;
+    ft_putchar(i);
+    
 }
